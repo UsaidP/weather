@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fefcff;
+}
+section {
+  width: 80%;
+  height: 80%;
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.375);
+  /* background-color: transparent; */
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border: 1px solid rgba(10, 10, 10, 0.3);
+}
+.left {
+  width: 40%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.search-location {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px 20px;
+  /* From https://css.glass */
+  background: rgba(63, 63, 63, 0.57);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.1px);
+  -webkit-backdrop-filter: blur(7.1px);
+  border: 1px solid rgba(63, 63, 63, 0.3);
+}
+#search {
+  width: 100%;
+  height: 70%;
+  border-radius: 15px;
+  padding: 10px;
+}
+.search {
+  width: 60%;
+}
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fefcff;
+}
+.main {
+  margin: 10px;
+  padding: 50px;
+  width: 100%;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.1);
+
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+
+  /* background: linear-gradient(); */
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.info h1 {
+  font-size: 100px;
+}
+.info h4 {
+  font-size: 50px;
+}
+.info P {
+  font-size: 20px;
+}
+.other-info {
+  width: 100%;
+  height: 60%;
+  margin: 10px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.item {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.104);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.153);
+  backdrop-filter: blur(7.1px);
+  -webkit-backdrop-filter: blur(7.1px);
+  border: 1px solid rgba(63, 63, 63, 0.3);
+}
+.heading {
+  color: #7d8a93;
+}
