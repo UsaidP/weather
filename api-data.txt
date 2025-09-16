@@ -1,0 +1,59 @@
+{
+  "request": {
+    "type": "City",
+    "query": "New Delhi, India",
+    "language": "en",
+    "unit": "m"
+  },
+  "location": {
+    "name": "New Delhi",
+    "country": "India",
+    "region": "Delhi",
+    "lat": "28.600",
+    "lon": "77.200",
+    "timezone_id": "Asia/Kolkata",
+    "localtime": "2025-09-15 18:36",
+    "localtime_epoch": 1757961360,
+    "utc_offset": "5.50"
+  },
+  "current": {
+    "observation_time": "01:06 PM",
+    "temperature": 33,
+    "weather_code": 143,
+    "weather_icons": [
+      "https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0006_mist.png"
+    ],
+    "weather_descriptions": [
+      "Haze"
+    ],
+    "astro": {
+      "sunrise": "06:06 AM",
+      "sunset": "06:26 PM",
+      "moonrise": "No moonrise",
+      "moonset": "02:12 PM",
+      "moon_phase": "Waning Crescent",
+      "moon_illumination": 44
+    },
+    "air_quality": {
+      "co": "432.9",
+      "no2": "5.365",
+      "o3": "144",
+      "so2": "23.495",
+      "pm2_5": "52.17",
+      "pm10": "184.445",
+      "us-epa-index": "3",
+      "gb-defra-index": "3"
+    },
+    "wind_speed": 11,
+    "wind_degree": 299,
+    "wind_dir": "WNW",
+    "pressure": 1003,
+    "precip": 0,
+    "humidity": 53,
+    "cloudcover": 25,
+    "feelslike": 34,
+    "uv_index": 0,
+    "visibility": 6,
+    "is_day": "no"
+  }
+}
