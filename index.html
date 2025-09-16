@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="search-location">
                     <div class="location-icon">
-                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                        <svg class="w-6 h-6 text-gray-100 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none"
                             viewBox="0 0 200 200">
                             <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
@@ -25,7 +25,7 @@
                     </div>
                     <div class="search"><input type="text" placeholder="Enter location" id="search"></div>
                     <div class="location-icon">
-                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                        <svg id="submit" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
                             viewBox="0 0 24 24">
                             <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
@@ -36,27 +36,27 @@
                 <div class="main">
                     <div class="info">
                         <h1 id="temp">28</h1>
-                        <h4>Rainy Day</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem, inventore?</p>
+                        <h4 id="weatherDiscripton">Rainy Day</h4>
+                        
                     </div>
                     <div class="other-info">
                         <div class="feels item">
-                            <h3 class="heading">FEELS LIKE</h3>
-                            <h1 id="temp">28</h1>
+                            <h3 id="" class="heading">FEELS LIKE</h3>
+                            <h1 id="feels">28</h1>
                             <p>Humidity is making it feels warmer. </p>
                         </div>
                         <div class="prescipitaion item">
                             <h3 class="heading">Prescipitaion</h3>
-                            <h1>53</h1>
+                            <h1 id="prescipitaion">53</h1>
                             <h3>in last 24 hours</h3>
                         </div>
                         <div class="visibility item">
                             <h3 class="heading">Visibility</h3>
-                            <h1> 6 mi</h1>
+                            <h1 id="visibility"> 6 mi</h1>
                         </div>
                         <div class="humidity item">
                             <h3 class="heading">Humidity</h3>
-                            <h1>82%</h1>
+                            <h1 id="humidity">82%</h1>
                             <p>The deve point is 25 right now. </p>
                         </div>
                     </div>

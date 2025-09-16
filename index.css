@@ -130,3 +130,10 @@ section {
 .heading {
   color: #7d8a93;
 }
+#submit {
+  cursor: pointer;
+  margin: 0 5px;
+}
+#submit:hover {
+  color: #7d8a93;
+}

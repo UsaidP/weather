@@ -1,42 +1,49 @@
 const temp = document.getElementById("temp");
+const search = document.getElementById("search");
+const submit = document.getElementById("submit");
+const weatherDiscripton = document.getElementById("weatherDiscripton");
+const feels = document.getElementById("feels");
+const prescipitaion = document.getElementById("prescipitaion");
+const visibility = document.getElementById("visibility");
+const humidity = document.getElementById("humidity");
 
-const API_URL =
-  "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=19.03&lon=73.02";
-
-async function fetchWeatherData() {
+async function fetchWeatherData(city) {
+  const API_URL = `https://api.weatherstack.com/current?access_key=b64d0e900c75c6deb97729e5fb8152a7&query=${
+    encodeURIComponent(city) ? encodeURIComponent(city) : "Mumbai"
+  }`;
+  const options = {
+    method: "GET",
+  };
   try {
-    const response = await fetch(API_URL);
+    const response = await fetch(API_URL, options);
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }
     let data = await response.json();
 
-    const timeseries = data.properties.timeseries;
+    const current = data.current;
 
-    const current = extractInstant(timeseries[0]);
-    temp.innerText = current.temp;
-    console.log(current);
-    console.log(timeseries[0]);
+    temp.innerText = current.temperature;
+    weatherDiscripton.innerText = current.weather_descriptions[0];
+    feels.innerText = current.feelslike;
+    prescipitaion.innerText = current.precip;
+    visibility.innerText = current.visibility;
+    humidity.innerText = current.humidity;
+    // console.log("Current" + current);
+    // console.log("description" + current.weather_descriptions[0]);
+    // console.log("feels" + current.feelslike);
+    // console.log("precips" + current.precip);
+    // console.log("visibility" + current.visibility);
+    // console.log("humidity" + current.humidity);
+
     return data;
   } catch (error) {
     console.log(error);
   }
 }
 
-function extractInstant(entry) {
-  const {
-    air_temperature,
-    wind_from_direction,
-    wind_speed,
-    relative_humidity,
-  } = entry.data.instant.details;
-  return {
-    temp: air_temperature,
-    time: entry.time,
-    humidity: relative_humidity,
-    wind_direction: wind_from_direction,
-    wind_speed: wind_speed,
-  };
-}
-
-fetchWeatherData();
+submit.addEventListener("click", (e) => {
+  e.preventDefault();
+  const city = search.value.trim();
+  city ? fetchWeatherData(city) : "Enter Valid City Name";
+});
