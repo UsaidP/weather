@@ -8,7 +8,7 @@ const visibility = document.getElementById("visibility");
 const humidity = document.getElementById("humidity");
 
 async function fetchWeatherData(city) {
-  const API_URL = `https://api.weatherstack.com/current?access_key=b64d0e900c75c6deb97729e5fb8152a7&query=${
+  const API_URL = `https://api.weatherstack.com/current?access_key=ab64d0e900c75c6deb97729e5fb8152a7&query=${
     encodeURIComponent(city) ? encodeURIComponent(city) : "Mumbai"
   }`;
   const options = {
